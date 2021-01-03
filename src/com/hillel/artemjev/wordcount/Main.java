@@ -1,5 +1,6 @@
 package com.hillel.artemjev.wordcount;
 
+import com.hillel.artemjev.wordcount.counter.WordCounter;
 import com.hillel.artemjev.wordcount.map.MyMap;
 
 
@@ -13,7 +14,7 @@ public class Main {
         System.out.println("\nДанная строка состоит из слов:");
         System.out.println("--------------------------------------");
 
-        for (MyMap.Pair<String, Integer> pair : WordCounter.getWords(str).pairSet()) {
+        for (MyMap.Pair<String, Integer> pair : WordCounter.getCountWords(str).pairSet()) {
             System.out.println(pair.getKey() + " - " + pair.getValue());
         }
 
